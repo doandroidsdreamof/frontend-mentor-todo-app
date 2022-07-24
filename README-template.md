@@ -29,5 +29,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - JavaScript
+- GSAP(https://greensock.com/) - JS library
 
 
