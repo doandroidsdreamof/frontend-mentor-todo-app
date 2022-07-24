@@ -48,5 +48,6 @@ Users should be able to:
 - Mobile-first workflow
 - JavaScript
 - GSAP(https://greensock.com/) - JS library
+- SortableJS(https://sortablejs.github.io/Sortable/) - JS library
 
 
