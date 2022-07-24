@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <title>Todo app</title>
+</head>
+<body >
+  <header>
+    <div class="cover">
+  </div>
+  </header>
+  <div class="background">
+  <div class="todo">
+    <h1  class="cover__head">TODO</h1>
+    <img id="darkmode" class="cover__darkmode darkModeOpen" src="images/icon-sun.svg" alt="darkmode">
+    <button id="mainCheck" class="todo__buttoncheck"></button>
+    <input id="mainInput" class="todo__input" type="text" placeholder="Create a new todo...">
+  </div>
+  <div id="wrapper" class="wrapper">
+    <div class="function">
+      <span class="function__left">0 items left</span>
+      <div class="function__group">
+        <div class="function__group__mobile">
+        <button  onclick="allTasksEvent();"  value="all" class="function__button focus">All</button>
+        <button  onclick="activeTasksEvent();" value="active" class="function__button focus">Active</button>
+        <button  onclick="completedTasksEvent();"  value="completed" class="function__button completedTasks focus">Completed</button>
+      </div>
+      </div>
+      <button onclick="clearAll();"  id="clearCompleted" class="function__button function__button__clearcompleted">Clear Completed</button>
+    </div>
+<div id="container" class="wrapper__container">
+</div>
+</div>
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js" integrity="sha512-5x7t0fTAVo9dpfbp3WtE2N6bfipUwk7siViWncdDoSz2KwOqVC1N9fDxEOzk0vTThOua/mglfF8NO7uVDLRC8Q==" crossorigin="anonymous"></script>
+  <script  src="./scripts/app.js"></script>
+  <script  src="./scripts/darkmode.js"></script>
+</body>
+</html>
