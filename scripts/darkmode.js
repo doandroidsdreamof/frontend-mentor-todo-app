@@ -6,14 +6,14 @@ const createdCompleted = completedTasks;
 const darkmodeButton = document.getElementById("darkmode");
 const container = document.getElementById("container");
 
-const urlDarkDesktop = "..images/bg-desktop-dark.jpg";
-const urlLightDesktop = "..images/bg-desktop-light.jpg";
+const urlDarkDesktop = "../images/bg-desktop-dark.jpg";
+const urlLightDesktop = "../images/bg-desktop-light.jpg";
 
-const urlDarkMobile = "..images/bg-mobile-dark.jpg";
-const urlLightMobile = "..images/bg-mobile-light.jpg";
+const urlDarkMobile = "../images/bg-mobile-dark.jpg";
+const urlLightMobile = "../images/bg-mobile-light.jpg";
 
-const urlImageMoon = "..images/icon-moon.svg";
-const urlImageSun = "..images/icon-sun.svg";
+const urlImageMoon = "../images/icon-moon.svg";
+const urlImageSun = "../images/icon-sun.svg";
 
 const inputTop = document.querySelector(".todo__input");
 const wrapperItems = document.querySelector(".wrapper");
