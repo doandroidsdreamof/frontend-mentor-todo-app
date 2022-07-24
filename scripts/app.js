@@ -37,6 +37,7 @@ function responsiveButton(){
 }
 window.addEventListener('resize',responsiveButton)
 window.onload = () =>{
+  groupMobile.classList.remove('function__group__mobile')
   responsiveButton()
 }
 //Dom manipulation from one place as much as possible prevent for complexity
