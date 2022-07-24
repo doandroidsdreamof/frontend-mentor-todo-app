@@ -40,7 +40,6 @@ window.onload = () =>{
   groupMobile.classList.remove('function__group__mobile')
   responsiveButton()
 }
-  responsiveButton();
 //Dom manipulation from one place as much as possible prevent for complexity
 function ConstructorClass(wrap, item, checked, content, remove, container) {
   this.wrap = wrapper.appendChild(todoItem);
@@ -166,6 +165,9 @@ mainInput.addEventListener("keypress", (e) => {
   }
 });
 
+
+
+
 function clearAll() {
   removeFinished("trueDeleted");
 }
@@ -179,5 +181,5 @@ function removeFinished(className) {
   }
 }
 
-
+  responsiveButton();
  
