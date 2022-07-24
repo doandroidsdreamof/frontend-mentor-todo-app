@@ -6,7 +6,7 @@ const createdCompleted = completedTasks;
 const darkmodeButton = document.getElementById("darkmode");
 const container = document.getElementById("container");
 
-const urlDarkDesktop = "bg-desktop-dark.jpg";
+const urlDarkDesktop = "images/bg-desktop-dark.jpg";
 const urlLightDesktop = "images/bg-desktop-light.jpg";
 
 const urlDarkMobile = "images/bg-mobile-dark.jpg";
