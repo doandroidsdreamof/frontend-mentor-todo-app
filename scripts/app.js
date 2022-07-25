@@ -108,9 +108,7 @@ window.addEventListener("click", (e) => {
   }
   if (target.matches(".todolist__deletebutton") && counter > 0) {
     target.parentElement.remove();
-    itemsCounter.innerText = --counter + itemsLeft;
-console.log(counter)
-  
+    itemsCounter.innerText = --counter + itemsLeft;  
    
   }
    if (target.matches(".todo__buttoncheck") && mainInput.value != "") {
@@ -176,8 +174,7 @@ function removeFinished(className) {
   const checked = document.getElementsByClassName(className);
   while (checked.length > 0) {
     checked[0].parentNode.removeChild(checked[0]);
-    counter = 0;
-    itemsCounter.innerText = counter + itemsLeft;
+    itemsCounter.innerText = --counter + itemsLeft;
   }
 }
 
