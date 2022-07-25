@@ -82,7 +82,6 @@ ConstructorClass.prototype.lineThrough = function () {
 };
 function createAndCount() {
   increaseId += 1; // for sortable list
-  itemsCounter.innerText = ++counter + itemsLeft;
   todoItem.setAttribute("data-id", `${increaseId}`);
   const createClass = new ConstructorClass();
   ConstructorClass.prototype.text();
@@ -106,17 +105,19 @@ window.addEventListener("click", (e) => {
         !getCheckIntput[i].checked ?  getCheckIntput[i].parentNode.style.textDecoration = "none" :   getCheckIntput[i].parentNode.style.textDecoration = "line-through";
 
       }
-  
-
-  if (target.matches(".todolist__deletebutton")) {
+  }
+  if (target.matches(".todolist__deletebutton") && counter > 0) {
     target.parentElement.remove();
-    !counter ? 0 : --counter; // check counter zero or negative
-    itemsCounter.innerText = counter + itemsLeft;
+    itemsCounter.innerText = --counter + itemsLeft;
+console.log(counter)
+  
+   
   }
-  if (target.matches(".todo__buttoncheck") && mainInput.value != "") {
+   if (target.matches(".todo__buttoncheck") && mainInput.value != "") {
     createAndCount();
+    counter += 1;
+    itemsCounter.innerText = counter + itemsLeft;
 
-  }
   }
 });
 
@@ -154,6 +155,8 @@ function completedTasksEvent() {
 mainInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter" && mainInput.value != "") {
     createAndCount();
+    counter += 1;
+    itemsCounter.innerText = counter + itemsLeft;
     //sorting list
     Sortable.create(containerForSort, {
       group: `data-id${increaseId}`,
@@ -165,9 +168,6 @@ mainInput.addEventListener("keypress", (e) => {
   }
 });
 
-
-
-
 function clearAll() {
   removeFinished("trueDeleted");
 }
@@ -176,7 +176,7 @@ function removeFinished(className) {
   const checked = document.getElementsByClassName(className);
   while (checked.length > 0) {
     checked[0].parentNode.removeChild(checked[0]);
-    counter--;
+    counter = 0;
     itemsCounter.innerText = counter + itemsLeft;
   }
 }
